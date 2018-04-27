@@ -1,0 +1,26 @@
+{
+    "editorUrl": "/",
+    "viewerUrl": "/viewer.html",
+    "wizard": {
+        "protectVariables": [
+            "app.gmxMap.mapID",
+            "layers"
+        ]
+    },
+    "appMirrors": {
+        "localhost": {
+            "app": {
+                "gmxMap": {
+                    "apiKey": "W4IH6K7CJ4"
+                }
+            }
+        },
+        "kosmosnimki.ru": {
+            "app": {
+                "gmxMap": {
+                    "apiKey": "E5FB6CCB5D23B5E119D2F1B26BCC57BD"
+                }
+            }
+        }
+    }
+}

@@ -27,7 +27,12 @@ nsGmx.ConfigTemplates.sidebar = {
         centerControl: {
             color: '#121212'
         },
-        layersTreeWidget: {}
+        layersTreeWidget: {
+			showInfoIcon: true,
+			showLegendIcon: true,
+			showDebugIcon: false,
+			showCenterIcon: false
+		}
     }
 };
 

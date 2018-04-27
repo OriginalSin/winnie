@@ -1,15 +1,3 @@
-[submodule "external/Leaflet-GeoMixer"]
-	path = external/Leaflet-GeoMixer
-	url = git@github.com:ScanEx/Leaflet-GeoMixer.git
-[submodule "external/gmxControls"]
-	path = external/gmxControls
-	url = git@github.com:ScanEx/gmxControls.git
-[submodule "external/Leaflet.TileLayer.Mercator"]
-	path = external/Leaflet.TileLayer.Mercator
-	url = git@github.com:ScanEx/Leaflet.TileLayer.Mercator.git
-[submodule "external/Leaflet.gmxBaseLayersManager"]
-	path = external/Leaflet.gmxBaseLayersManager
-	url = git@github.com:ScanEx/Leaflet.gmxBaseLayersManager.git
 [submodule "external/GMXBuilder"]
 	path = external/GMXBuilder
 	url = git@github.com:ScanEx/GMXBuilder.git
@@ -22,21 +10,9 @@
 [submodule "external/leaflet.markercluster"]
 	path = external/leaflet.markercluster
 	url = git@github.com:leaflet/leaflet.markercluster.git
-[submodule "external/leaflet-GIBS"]
-	path = external/leaflet-GIBS
-	url = git@github.com:aparshin/leaflet-GIBS.git
-[submodule "external/GMXPluginGFW"]
-	path = external/GMXPluginGFW
-	url = git@github.com:ScanEx/GMXPluginGFW.git
-[submodule "external/GMXPluginCadatsre"]
-	path = external/GMXPluginCadatsre
-	url = git@github.com:ScanEx/GMXPluginCadatsre.git
 [submodule "external/L.ImageOverlay.Pane"]
 	path = external/L.ImageOverlay.Pane
 	url = git@github.com:ScanEx/L.ImageOverlay.Pane.git
-[submodule "external/gmxDrawing"]
-	path = external/gmxDrawing
-	url = git@github.com:scanex/gmxDrawing.git
 [submodule "external/winnie-core"]
 	path = external/winnie-core
 	url = git@github.com:Kosmosnimki/winnie-core.git

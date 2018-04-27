@@ -1,3 +1,39 @@
+var nsGmx = nsGmx || {};nsGmx.Templates = nsGmx.Templates || {};nsGmx.Templates.Editor = {};
+nsGmx.Templates.Editor["saveDialog"] = "<div class=\"editor-dialog editor-saveDialog ui-widget\">\n" +
+    "    {{#if permalink}}\n" +
+    "        <div class=\"gmx-table editor-dialog-row editor-dialog-row_bottom\">\n" +
+    "            <div class=\"gmx-table-cell editor-saveDialog-permalinkCell\">\n" +
+    "                <input class=\"gmx-input-text gmx-input-text_maxwidth\" value=\"{{permalink}}\" />\n" +
+    "            </div>\n" +
+    "            <div class=\"gmx-table-cell editor-saveDialog-openIconCell\">\n" +
+    "                <a href=\"{{permalink}}\" target=\"_blank\"><i class=\"icon-link-ext-alt\"></i></a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    {{else}}\n" +
+    "        creating permalink..\n" +
+    "    {{/if}}\n" +
+    "</div>";
+nsGmx.Templates.Editor["wizard"] = "<div class=\"configWizard\">\n" +
+    "    <div class=\"configWizard-content\">\n" +
+    "        <div class=\"configWizard-title\">Config Wizard</div>\n" +
+    "        <div class=\"configWizard-control configWizard-apptypeSwitch\"></div>\n" +
+    "        <a class=\"configWizard-galleryLink\" href=\"gallery.html\" target=\"_blank\">gallery</a>\n" +
+    "    </div>\n" +
+    "</div>";
+nsGmx.Templates.Editor["apptypeSwitch"] = "<ul class=\"configWizard-contol apptypeSwitch\">\n" +
+    "    <li class=\"apptypeSwitch-button apptypeSwitch-button_mapApp\" data-apptype=\"map\">\n" +
+    "        <div class=\"apptypeSwitch-buttonImageBackground\"><div class=\"apptypeSwitch-buttonImage\"></div></div>\n" +
+    "        <div class=\"apptypeSwitch-buttonTitle\">Empty map</div>\n" +
+    "    </li>\n" +
+    "    <li class=\"apptypeSwitch-button apptypeSwitch-button_storytellingApp\" data-apptype=\"storytelling\">\n" +
+    "        <div class=\"apptypeSwitch-buttonImageBackground\"><div class=\"apptypeSwitch-buttonImage\"></div></div>\n" +
+    "        <div class=\"apptypeSwitch-buttonTitle\">Storytelling app</div>\n" +
+    "    </li>\n" +
+    "    <li class=\"apptypeSwitch-button apptypeSwitch-button_sidebarApp\" data-apptype=\"sidebar\">\n" +
+    "        <div class=\"apptypeSwitch-buttonImageBackground\"><div class=\"apptypeSwitch-buttonImage\"></div></div>\n" +
+    "        <div class=\"apptypeSwitch-buttonTitle\">Sidebar app</div>\n" +
+    "    </li>\n" +
+    "</ul>";;
 (function() {
     function jsonIsValid(json) {
         try {
@@ -502,3 +538,101 @@
 
     cm.create();
 })();
+;
+var nsGmx = nsGmx || {};
+nsGmx.ConfigWizard = (function() {
+    var mousetoggle = function(el, className) {
+        $(el).on('mouseenter', function() {
+            $(this).addClass(className);
+        }).on('mouseleave', function() {
+            $(this).removeClass(className);
+        });
+    };
+
+    var ApptypeSwitch = function() {
+        this._view = $(nsGmx.Templates.Editor.apptypeSwitch);
+        mousetoggle(this._view, 'apptypeSwitch_hovered');
+        mousetoggle(this._view.find('.apptypeSwitch-button'), 'apptypeSwitch-button_hovered');
+        this._view.find('.apptypeSwitch-button').on('click', function(je) {
+            this._view.find('.apptypeSwitch-button').removeClass('apptypeSwitch-button_active');
+            $(je.currentTarget).addClass('apptypeSwitch-button_active');
+            this.trigger('switch', $(je.currentTarget).attr('data-apptype'));
+        }.bind(this));
+    };
+
+    ApptypeSwitch.prototype = Backbone.Events;
+
+    ApptypeSwitch.prototype.appendTo = function(container) {
+        this._view.appendTo(container);
+    };
+
+    var ConfigWizard = function() {
+        this._view = $(nsGmx.Templates.Editor.wizard);
+        this._configTemplates = {};
+        this._apptypeSwitch = new ApptypeSwitch();
+        this._apptypeSwitch.appendTo(this._view.find('.configWizard-apptypeSwitch'))
+        this._apptypeSwitch.on('switch', function(apptype) {
+            this.trigger('configchange', nsGmx.ConfigTemplates[apptype]);
+        }.bind(this));
+    };
+
+    ConfigWizard.prototype = Backbone.Events;
+
+    ConfigWizard.prototype.appendTo = function(container) {
+        this._view.appendTo(container);
+    };
+
+    return ConfigWizard;
+})();
+;
+var nsGmx = nsGmx || {};
+
+nsGmx.ConfigTemplates = {};
+
+nsGmx.ConfigTemplates.map = {
+    app: {
+        gmxMap: {
+            mapID: 'DA2C1A3C05704A5F850F397AFED5CECE',
+            apiKey: 'W4IH6K7CJ4'
+        },
+        zoomControl: true,
+        hideControl: true,
+        centerControl: {
+            color: '#121212'
+        }
+    }
+};
+
+nsGmx.ConfigTemplates.sidebar = {
+    app: {
+        gmxMap: {
+            mapID: 'DA2C1A3C05704A5F850F397AFED5CECE',
+            apiKey: 'W4IH6K7CJ4'
+        },
+        zoomControl: true,
+        hideControl: true,
+        centerControl: {
+            color: '#121212'
+        },
+        layersTreeWidget: {
+			showInfoIcon: true,
+			showLegendIcon: true,
+			showDebugIcon: false,
+			showCenterIcon: false
+		}
+    }
+};
+
+nsGmx.ConfigTemplates.storytelling = {
+    app: {
+        gmxMap: {
+            mapID: 'DA2C1A3C05704A5F850F397AFED5CECE',
+            apiKey: 'W4IH6K7CJ4'
+        },
+        zoomControl: false,
+        hideControl: false,
+        centerControl: false,
+        baseLayersControl: false,
+        storytellingWidget: {}
+    }
+};;

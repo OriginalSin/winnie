@@ -1,0 +1,96 @@
+.layersTreeWidget-contentView-centerIconCell {
+	padding-right: 8px;
+}
+.layersTreeWidget-contentView-title {
+	font-size: 12px;
+}
+.layersTreeWidget-contentView-description {
+	font-style: italic;
+    font-family: sans-serif;
+	opacity: 0.7;
+}
+.gmx-listNode .layersTreeWidgetNode-contentView .gmx-table {
+	position: relative;
+}
+.layersTreeWidget.ui-widget {
+	padding-left: 16px;
+}
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIcon {
+	background: url('./m-gridTool.svg?393d48');
+	height: 16px;
+    width: 16px;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+}
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIconStyleCount {
+    position: absolute;
+    right: 232px;
+}
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-infoIcon {
+    position: absolute;
+    right: -6px;
+	top: 2px;
+}
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIconStyleCount:hover {
+/*	fill: red;*/
+}
+.layersTreeWidget-contentView-icon svg {
+    height: 16px;
+    width: 16px;
+	fill-opacity: 0.5;
+	/*
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    pointer-events: none;
+	*/
+}
+/*
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIconEye.disabled {
+	background: url('./eye-off.svg');
+}
+*/
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIconEye:hover {
+	fill: red;
+}
+.layersTreeWidget-contentView-icon.layersTreeWidget-contentView-legendIconEye {
+	/* background: url('./eye-on.svg'); */
+	height: 16px;
+    width: 16px;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+}
+.gmx-table .layersTreeWidget-contentView-legendIconStyle, .layersTreeWidget-contentView-legendIconCell .layersTreeWidget-contentView-legendIconStyle, .layersTreeWidget-contentView-legendIconCell .layersTreeWidget-contentView-legendIconStyleImage  {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 3px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.layersTreeWidget-contentView-legendIconStyle {
+    border: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+.layersTreeWidget-contentView-legendIconStyleImage img {
+	height: 16px;
+    width: 16px;
+    left: -4px;
+    position: relative;
+}
+.layersTreeWidget-contentView-legendIconStyle.linestring {
+    border-bottom: unset;
+    border-top: unset;
+    border-right: unset;
+	border-radius: unset;
+    border-width: 2px;
+}
+.layersTreeWidgetNode-content.ui-widget-content.gmx-listNode {
+    border-left: unset;
+    border-right: unset;
+	border-bottom: unset;
+}
+

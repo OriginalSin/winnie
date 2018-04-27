@@ -1,0 +1,523 @@
+.dropdownMenuWidget {
+  display: table;
+}
+
+.dropdownMenuWidget-item {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px 10px;
+  white-space: nowrap;
+}
+
+.dropdownMenuWidget-item a {
+  color: #303030;
+  text-decoration: none;
+}
+
+.dropdownMenuWidget-item a img,
+.dropdownMenuWidget-item a span,
+.dropdownMenuWidget-item a i {
+  border: none;
+  vertical-align: middle;
+}
+
+.dropdownMenuWidget-item a:hover {
+  color: #000000;
+}
+
+.dropdownMenuWidget-itemDropdown {
+  position: absolute;
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.dropdownMenuWidget-dropdownMenu {
+  background: white;
+  border: 1px solid #efefef;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.dropdownMenuWidget-dropdownMenuIcon {
+  float: right;
+}
+
+.dropdownMenuWidget-dropdownMenuItem {
+  display: block;
+  border-bottom: 1px solid #efefef;
+  padding: 5px 10px;
+}
+
+.dropdownMenuWidget-dropdownMenuItem a {
+  width: 100%;
+  display: block;
+}
+
+.dropdownMenuWidget-dropdownItemAnchor_newWindow {
+  margin-right: 20px;
+}
+
+.dropdownMenuWidget-dropdownMenuItem:hover {
+  background: #efefef;
+}
+.dropdownWidget {
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdownWidget.dropdownWidget-item {
+  border: none;
+}
+
+.dropdownWidget.dropdownWidget-item:last-child {
+  border: none;
+}
+
+.dropdownWidget-dropdown {
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 0 10px hsla(0,0%,0%,0.3);
+}
+
+.dropdownWidget_direction-up .dropdownWidget-dropdown {
+  bottom: 0;
+}
+
+.dropdownWidget_direction-down .dropdownWidget-dropdown {
+  top: 0;
+}
+
+.dropdownWidget-item {
+  padding: 4px 8px;
+  border-top: 1px solid hsl(0, 0%, 90%);
+  white-space: nowrap;
+}
+
+.dropdownWidget-item:last-child {
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.dropdownWidget-dropdownItem:hover {
+  background: hsl(0, 0%, 95%);
+}
+
+.dropdownWidget-dropdownTitle {
+  cursor: pointer;
+}
+.alertWidget-message {
+  padding: 2px 4px;
+  margin-bottom: 4px;
+}
+
+.alertWidget-message:last-child {
+  margin-bottom: 0;
+}
+.shareIcon {
+  cursor: pointer;
+}
+
+.shareDialogContainer {
+  width: 230px;
+}
+
+.shareDialog {
+  padding: 2px 0;
+}
+
+.shareDialog a {
+  color: #121212;
+}
+
+.shareDialog-title {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.shareDialog-row {
+  padding-bottom: 8px;
+}
+
+.shareDialog-row:last-child {
+  padding-bottom: 0px;
+}
+
+/*.shareDialog button.mfp-close { width: 28px; height: 28px; line-height: 20px; font-size: 14px; }*/
+
+.shareDialog i {
+  font-size: 12px;
+}
+
+.shareDialog .icon-link-ext {
+  padding: 0px 2px;
+}
+
+.shareDialog .shareDialog-title .shareDialog-socialShareLink {
+  float: right;
+}
+
+
+
+.shareDialog-permalinkUrlCell {
+  width: 100%;
+}
+
+.shareDialog-permalinkUrlPreviewButton {
+  padding: 0 4px;
+}
+
+
+
+.shareDialog-resolutionTable {
+  width: 100%;
+}
+
+.shareDialog-previewResolutionCell {
+  width: 50%;
+}
+
+.shareDialog-previewResolutionCell input {
+  width: 40px;
+}
+
+.shareDialog-resolutionCross {
+  margin: 0 2px;
+}
+
+.shareDialog-previewLinkCell {
+  width: 50%;
+  text-align: right;
+}
+
+.shareDialog .shareDialog-inputEmbedCode {
+  height: 55px;
+  resize: none;
+  display: block;
+  font-family: monospace;
+}
+
+.shareDialog-includePermalinkLabel {
+  padding: 0 5px;
+}
+
+.shareDialog-includePermalinkCheckbox {
+  margin: 0;
+  vertical-align: middle;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+body .ui-widget {
+  font-family: 'Roboto';
+}
+
+.editor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.editor-sidebarContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  overflow: hidden;
+}
+
+.editor-sidebarContainer {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: width .5s ease;
+}
+
+.editor_sidebarExpanded.editor-sidebarContainer {
+  width: 500px;
+}
+
+.editor-collapseButton {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+}
+
+.editor-collapseButton {
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  background-color: #ffffff;
+  border-radius: 0 5px 5px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.editor-collapseButton {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.editor-collapseButton:before {
+  margin: 3px 1px;
+}
+
+.sidebarPanel-toolbarContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.sidebarPanel-toolbarContainer {
+  border-right: 1px solid #f0f0f0;
+  background-color: #ebebeb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebarPanel-toolbarContainer .dropdownMenuWidget {
+  height: 100%;
+}
+
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item {
+  font-size: 14px;
+}
+
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item a {
+  color: #424242;
+}
+
+.sidebarPanel-codeEditorContainer {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidebarPanel-codeEditorContainer {
+  border-right: 1px solid #f0f0f0;
+}
+
+.editor-viewerContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.editor-viewerContainer .leaflet-container {
+  background-image: url('editor/build/tiny_grid.png?3ea142');
+}
+
+.editor_sidebarExpanded.editor-viewerContainer {
+  left: 500px;
+}
+
+.toolbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.toolbar-item {
+  display: inline-block;
+}
+
+.editor-wizardContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.editor-wizardContainer {
+  z-index: 2000;
+}
+
+.editor-wizardContainer_loading {
+  background-color: #fff;
+}
+
+.editor-collapseButton {
+  z-index: 50;
+}
+
+.sidebarPanel-toolbarContainer {
+  z-index: 40;
+}
+
+.sidebarPanel-codeEditorContainer {
+  z-index: 30;
+}
+
+.editor-sidebarContainer {
+  z-index: 20;
+}
+
+.editor-viewerContainer {
+  z-index: 5;
+}
+
+.editor-dialog {
+  padding: 6px 8px;
+}
+
+.popover .editor-dialog {
+  padding: 0;
+}
+
+.editor-dialog-title {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.editor-dialog-row {
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.editor-dialog-row_bottom {
+  padding-bottom: 0px;
+}
+
+.editor-dialog button.mfp-close {
+  width: 28px;
+  height: 28px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.editor-saveDialog-permalinkCell {
+  width: 100%;
+}
+
+.editor-saveDialog-openIconCell {
+  font-size: 14px;
+  padding-left: 6px;
+}
+
+.editor-saveDialog-openIconCell a {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+.editor-saveDialog-openIconCell a:hover {
+  color: #000000;
+}
+
+.shareDialogContainer {
+  width: 250px;
+}
+.configWizard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.configWizard {
+  background: #efefef;
+}
+
+.configWizard-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.configWizard-title {
+  font-size: 36px;
+  color: #5c5c5c;
+  font-family: 'Roboto';
+  border-bottom: 4px solid rgba(0,0,0,0.1);
+  padding-bottom: 4px;
+}
+
+.configWizard-contol,
+.configWizard-contol.apptypeSwitch {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.configWizard-galleryLink {
+  margin-top: 20px;
+  color: hsl(0, 0%, 36%);
+  font-size: 24px;
+  display: block;
+}
+
+.configWizard-galleryLink:visited {
+  font-size: 24px;
+}
+
+.apptypeSwitch {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.apptypeSwitch-button {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.2;
+  transition: opacity .15s ease;
+}
+
+.apptypeSwitch_hovered .apptypeSwitch-button_active {
+  opacity: 0.2;
+}
+
+.apptypeSwitch .apptypeSwitch-button_hovered,
+.apptypeSwitch-button_active {
+  opacity: 0.5;
+}
+
+.apptypeSwitch-buttonImage {
+  width: 250px;
+  height: 180px;
+}
+
+.apptypeSwitch-buttonTitle {
+  padding: 3px 0;
+  font-size: 21px;
+}
+
+.apptypeSwitch-button_mapApp .apptypeSwitch-buttonImage {
+  background: url('editor/build/wizard-apptype-map.svg?393d48');
+}
+
+.apptypeSwitch-button_storytellingApp .apptypeSwitch-buttonImage {
+  background: url('editor/build/wizard-apptype-storytelling.svg?81d264');
+}
+
+.apptypeSwitch-button_sidebarApp .apptypeSwitch-buttonImage {
+  background: url('editor/build/wizard-apptype-sidebar.svg?2fc489');
+}

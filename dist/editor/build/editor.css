@@ -1,0 +1,55 @@
+html, body { padding: 0; margin: 0; width: 100%; height: 100%; }
+body { font-family: 'Roboto'; }
+body .ui-widget { font-family: 'Roboto'; }
+
+.editor { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+.editor-sidebarContainer { position: absolute; top: 0; bottom: 0; left: 0; width: 0px; overflow: hidden; }
+.editor-sidebarContainer { background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); transition: width .5s ease; }
+.editor_sidebarExpanded.editor-sidebarContainer { width: 500px; }
+
+.editor-collapseButton { position: absolute; top: 50%; left: 0; width: 26px; height: 26px; margin-top: -13px; }
+.editor-collapseButton { box-shadow: 0 0 10px rgba(0,0,0,0.25); background-color: #ffffff; border-radius: 0 5px 5px 0; font-size: 20px; cursor: pointer; }
+.editor-collapseButton { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.editor-collapseButton:before { margin: 3px 1px; }
+
+.sidebarPanel-toolbarContainer { position: absolute; top: 0; left: 0; right: 0; height: 40px; }
+.sidebarPanel-toolbarContainer { border-right: 1px solid #f0f0f0; background-color: #ebebeb; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.sidebarPanel-toolbarContainer .dropdownMenuWidget { height: 100%; }
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item { font-size: 14px; }
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item:hover { background: rgba(0, 0, 0, 0.05); }
+.sidebarPanel-toolbarContainer .dropdownMenuWidget-item a { color: #424242; }
+
+.sidebarPanel-codeEditorContainer { position: absolute; top: 40px; bottom: 0; left: 0; right: 0; }
+.sidebarPanel-codeEditorContainer { border-right: 1px solid #f0f0f0; }
+
+.editor-viewerContainer { position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; }
+.editor-viewerContainer .leaflet-container { background-image: url('tiny_grid.png'); }
+.editor_sidebarExpanded.editor-viewerContainer { left: 500px; }
+
+.toolbar { margin: 0; padding: 0; list-style-type: none; }
+.toolbar-item { display: inline-block; }
+
+.editor-wizardContainer { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.editor-wizardContainer { z-index: 2000; }
+.editor-wizardContainer_loading { background-color: #fff; }
+
+.editor-collapseButton { z-index: 50; }
+.sidebarPanel-toolbarContainer { z-index: 40; }
+.sidebarPanel-codeEditorContainer { z-index: 30; }
+.editor-sidebarContainer { z-index: 20; }
+.editor-viewerContainer { z-index: 5; }
+
+.editor-dialog { padding: 6px 8px; }
+.popover .editor-dialog { padding: 0; }
+.editor-dialog-title { font-weight: bold; font-size: 12px; }
+.editor-dialog-row { padding-bottom: 8px; width: 100%; }
+.editor-dialog-row_bottom { padding-bottom: 0px; }
+.editor-dialog button.mfp-close { width: 28px; height: 28px; line-height: 20px; font-size: 14px; }
+
+.editor-saveDialog-permalinkCell { width: 100%; }
+.editor-saveDialog-openIconCell { font-size: 14px; padding-left: 6px; }
+.editor-saveDialog-openIconCell a { color: #3a3a3a; text-decoration: none; }
+.editor-saveDialog-openIconCell a:hover { color: #000000; }
+
+.shareDialogContainer { width: 250px; }
